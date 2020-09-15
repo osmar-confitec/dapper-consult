@@ -12,6 +12,9 @@ namespace Data.Extensions
     public static class QuerySql
     {
 
+        //link https://www.thetopsites.net/article/51583047.shtml
+
+
 
         public static IEnumerable<string> ToParameters<TEntity>(this IQueryable<TEntity> query) where TEntity : class
         {

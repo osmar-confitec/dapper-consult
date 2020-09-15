@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Data.Abstract;
 using Data.Context;
 using Data.Repository;
+using Domain.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -44,8 +46,9 @@ namespace Api
 
             services.AddScoped<ContextoS>();
             services.AddScoped<IPedidoRepository, PedidoRepository>();
+            services.AddScoped<IConn, SqlFactory>();
 
-            
+
 
             services.AddDbContext<ContextoS>(options =>
             options

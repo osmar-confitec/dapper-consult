@@ -1,5 +1,6 @@
 ﻿using Dapper;
 using Data.Extensions;
+using Domain.Interfaces;
 using Domain.Models;
 using Domain.ViewModel;
 using Microsoft.EntityFrameworkCore;
@@ -16,16 +17,18 @@ namespace Data.Repository
 {
     public class PedidoRepository : Repository<Pedido>, IPedidoRepository
     {
-        public PedidoRepository(Context.ContextoS context) 
+
+        readonly IConn _conn;
+
+        public PedidoRepository(IConn conn, Context.ContextoS context) 
             : base(context)
         {
-
-
+            _conn = conn;
         }
 
         public async Task<IEnumerable<Pedido>> GetAllDapper(Expression<Func<Pedido, bool>> consulta)
         {
-            return await Db.Database.GetDbConnection()
+            return await _conn.GetCon
                             .QueryAsync<Pedido>(Db.Pedidos
                                .AsNoTracking()
                                .Where(consulta).ToSql());
@@ -52,7 +55,7 @@ namespace Data.Repository
             var sql2 =  query
                               .Where(consulta).ToSql();
 
-            return await Db.Database.GetDbConnection()
+            return await _conn.GetCon
                            .QueryAsync<PedidoViewModel>(query
                               .Where(consulta).ToSql());
 
@@ -149,7 +152,7 @@ namespace Data.Repository
 
 
 
-            return await Db.Database.GetDbConnection()
+            return await _conn.GetCon
                            .QueryAsync<PedidoViewModel>(query
                               .ToSql(), parameters);
 
