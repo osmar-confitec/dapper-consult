@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Interfaces\IConn.cs~RF23160b5.TMP" />
+    <None Remove="Models\Pedido.cs~RF21e017a.TMP" />
+    <None Remove="Models\Pedido.cs~RF21f0108.TMP" />
+    <None Remove="Models\PedidoItem.cs~RF2763c83.TMP" />
+    <None Remove="ViewModel\PedidoItensViewModel.cs~RF3bfbd7b.TMP" />
+    <None Remove="ViewModel\PedidoItensViewModel.cs~RF3cbf24c.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="3.1.8" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Abstract\FireBirdFactory.cs~RF2bbafa1.TMP" />
+    <None Remove="Abstract\MysqlFactory.cs~RF23031e9.TMP" />
+    <None Remove="Abstract\shwfb52l.pk5~" />
+    <None Remove="Abstract\SqlFactory.cs~RF314338a.TMP" />
+    <None Remove="Context\Context.cs~RF243c582.TMP" />
+    <None Remove="Context\Context.cs~RF259a165.TMP" />
+    <None Remove="Mapping\PedidoItensMap.cs~RF25fae0a.TMP" />
+    <None Remove="Repository\IPedidoRepository.cs~RF2ab424e.TMP" />
+    <None Remove="Repository\IPedidoRepository.cs~RF3719d3c.TMP" />
+    <None Remove="Repository\IPedidoRepository.cs~RF3cb1fba.TMP" />
+    <None Remove="Repository\PedidoRepository.cs~RF2536226.TMP" />
+    <None Remove="Repository\PedidoRepository.cs~RF2aa3bbb.TMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="FirebirdSql.Data.FirebirdClient" Version="7.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="1.1.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.8" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.8" />
+    <PackageReference Include="MySql.Data" Version="8.0.21" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+</Project>
